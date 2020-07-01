@@ -1,0 +1,73 @@
+send "EWD/EMD057-"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057-/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456789"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456789/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456788"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456788/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456787"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456787/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456786"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456786/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456785"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456785/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456784"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456784/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}send "EWD/EMD057- 123456783"
+capture line:1,column:74,length:6 assign to pnr
+send "TRF057- 123456783/EMD"
+capture line:1,column:8,length:8 assign to responseSystem
+if("REJECTED"==responseSystem){
+append "QE99C1-" + pnr to commandline
+send commandline
+}else{
+send "TRFP"
+}
