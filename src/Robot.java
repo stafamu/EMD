@@ -6,16 +6,24 @@ import java.util.List;
 public class Robot {
 
 
+    public void start() throws IOException {
+
+        this.iterateList();
+    }
+
+
     public String emdList() throws IOException {
 
         String str = "057-123456789057-123456788057-123456787057-123456786057-123456785057-123456784057-123456783";
         List<String> list = Arrays.asList(str.split("057-"));
         String listString = String.join(", ", list);
         return listString;
+
     }
 
 
     public String log(String message) throws IOException {
+
         PrintWriter out = new PrintWriter(new FileWriter("output1.txt", true), true);
         out.write(message);
         out.close();
@@ -25,8 +33,7 @@ public class Robot {
 
     public void iterateList() throws IOException {
 
-        String iteration = emdList();
-        String[] arrOfStr = iteration.split(",");
+        String[] arrOfStr = emdList().split(",");
         for (String a : arrOfStr)
             this.scriptAmadeus(a);
 
